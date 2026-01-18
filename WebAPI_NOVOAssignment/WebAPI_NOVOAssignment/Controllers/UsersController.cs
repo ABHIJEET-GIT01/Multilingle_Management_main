@@ -72,33 +72,6 @@ public class UsersController : ControllerBase
         });
     }
 
-    /// <summary>
-    /// Create new user (Admin Only)
-    /// </summary>
-    /// <remarks>
-    /// Requires admin role. Creates a new user with the provided details.
-    /// 
-    /// Query parameters:
-    /// - culture: Language code (en, hi, mr) - default: en
-    /// 
-    /// Sample request:
-    /// 
-    ///     POST /api/users
-    ///     {
-    ///         "username": "jane_doe",
-    ///         "email": "jane@example.com",
-    ///         "password": "SecurePassword123!",
-    ///         "firstName": "Jane",
-    ///         "lastName": "Doe",
-    ///         "roleIds": ["role-guid-1"]
-    ///     }
-    /// </remarks>
-    /// <param name="request">User creation request</param>
-    /// <returns>Created user details</returns>
-    /// <response code="201">User created successfully</response>
-    /// <response code="400">Validation error</response>
-    /// <response code="401">Not authenticated</response>
-    /// <response code="403">Not an admin</response>
     [HttpPost]
     //[Authorize(Roles = "Admin")]
     //[ProducesResponseType(typeof(ApiResponseDto<UserDetailDto>), StatusCodes.Status201Created)]
@@ -137,34 +110,7 @@ public class UsersController : ControllerBase
         });
     }
 
-    /// <summary>
-    /// Update user (Admin Only)
-    /// </summary>
-    /// <remarks>
-    /// Requires admin role. Updates an existing user's information.
-    /// 
-    /// Query parameters:
-    /// - culture: Language code (en, hi, mr) - default: en
-    /// 
-    /// Sample request:
-    /// 
-    ///     PUT /api/users/user-guid
-    ///     {
-    ///         "username": "jane_doe_updated",
-    ///         "email": "newemail@example.com",
-    ///         "firstName": "Jane",
-    ///         "lastName": "Smith",
-    ///         "roleIds": ["role-guid-1"]
-    ///     }
-    /// </remarks>
-    /// <param name="id">User GUID</param>
-    /// <param name="request">User update request</param>
-    /// <returns>Updated user details</returns>
-    /// <response code="200">User updated successfully</response>
-    /// <response code="400">Validation error</response>
-    /// <response code="401">Not authenticated</response>
-    /// <response code="403">Not an admin</response>
-    /// <response code="404">User not found</response>
+   
     [HttpPut("{id}")]
     [Authorize(Roles = "Admin")]
     [ProducesResponseType(typeof(ApiResponseDto<UserDetailDto>), StatusCodes.Status200OK)]
@@ -204,21 +150,6 @@ public class UsersController : ControllerBase
         });
     }
 
-    /// <summary>
-    /// Delete user (Admin Only)
-    /// </summary>
-    /// <remarks>
-    /// Requires admin role. Permanently removes a user from the system.
-    /// 
-    /// Query parameters:
-    /// - culture: Language code (en, hi, mr) - default: en
-    /// </remarks>
-    /// <param name="id">User GUID</param>
-    /// <returns>Success message</returns>
-    /// <response code="200">User deleted</response>
-    /// <response code="401">Not authenticated</response>
-    /// <response code="403">Not an admin</response>
-    /// <response code="404">User not found</response>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Admin")]
     [ProducesResponseType(typeof(ApiResponseDto<object>), StatusCodes.Status200OK)]
