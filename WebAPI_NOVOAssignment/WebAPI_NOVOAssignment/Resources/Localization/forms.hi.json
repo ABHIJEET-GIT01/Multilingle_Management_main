@@ -1,0 +1,61 @@
+{
+  "login": {
+    "title": "लॉगिन करें",
+    "fields": [
+      {
+        "name": "email",
+        "type": "email",
+        "label": "ईमेल पता",
+        "placeholder": "अपना ईमेल दर्ज करें",
+        "required": true
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "label": "पासवर्ड",
+        "placeholder": "अपना पासवर्ड दर्ज करें",
+        "required": true
+      }
+    ]
+  },
+  "register": {
+    "title": "पंजीकरण करें",
+    "fields": [
+      {
+        "name": "username",
+        "type": "text",
+        "label": "उपयोगकर्ता नाम",
+        "placeholder": "एक उपयोगकर्ता नाम चुनें",
+        "required": true
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "label": "ईमेल पता",
+        "placeholder": "अपना ईमेल दर्ज करें",
+        "required": true
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "label": "पासवर्ड",
+        "placeholder": "एक मजबूत पासवर्ड बनाएँ",
+        "required": true
+      },
+      {
+        "name": "firstName",
+        "type": "text",
+        "label": "पहला नाम",
+        "placeholder": "अपना पहला नाम दर्ज करें",
+        "required": false
+      },
+      {
+        "name": "lastName",
+        "type": "text",
+        "label": "अंतिम नाम",
+        "placeholder": "अपना अंतिम नाम दर्ज करें",
+        "required": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+@WebAPI_NOVOAssignment_HostAddress = http://localhost:5207
+
+GET {{WebAPI_NOVOAssignment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

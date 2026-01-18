@@ -1,0 +1,61 @@
+{
+  "login": {
+    "title": "लॉगिन करा",
+    "fields": [
+      {
+        "name": "email",
+        "type": "email",
+        "label": "ईमेल पत्ता",
+        "placeholder": "आपली ईमेल प्रविष्ट करा",
+        "required": true
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "label": "पासवर्ड",
+        "placeholder": "आपला पासवर्ड प्रविष्ट करा",
+        "required": true
+      }
+    ]
+  },
+  "register": {
+    "title": "नोंदणी करा",
+    "fields": [
+      {
+        "name": "username",
+        "type": "text",
+        "label": "वापरकर्ता नाव",
+        "placeholder": "एक वापरकर्ता नाव निवडा",
+        "required": true
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "label": "ईमेल पत्ता",
+        "placeholder": "आपली ईमेल प्रविष्ट करा",
+        "required": true
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "label": "पासवर्ड",
+        "placeholder": "एक मजबूत पासवर्ड तयार करा",
+        "required": true
+      },
+      {
+        "name": "firstName",
+        "type": "text",
+        "label": "पहिले नाव",
+        "placeholder": "आपले पहिले नाव प्रविष्ट करा",
+        "required": false
+      },
+      {
+        "name": "lastName",
+        "type": "text",
+        "label": "शेवटचे नाव",
+        "placeholder": "आपले शेवटचे नाव प्रविष्ट करा",
+        "required": false
+      }
+    ]
+  }
+}

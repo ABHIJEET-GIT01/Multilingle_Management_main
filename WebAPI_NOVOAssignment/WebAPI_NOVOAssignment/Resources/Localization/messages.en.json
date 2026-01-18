@@ -1,0 +1,23 @@
+{
+  "login_success": "Login successful",
+  "login_failed": "Invalid email or password",
+  "registration_success": "Registration successful",
+  "registration_failed": "Failed to register - invalid data or email/username already exists",
+  "user_created": "User created successfully",
+  "user_updated": "User updated successfully",
+  "user_deleted": "User deleted successfully",
+  "user_not_found": "User not found",
+  "users_loaded": "Users loaded successfully",
+  "validation_failed": "Validation failed",
+  "invalid_request": "Invalid request",
+  "token_refreshed": "Token refreshed successfully",
+  "token_revoked": "Token revoked successfully",
+  "revoke_failed": "Failed to revoke token",
+  "invalid_token": "Invalid or expired refresh token",
+  "form_not_found": "Form not found",
+  "role_created": "Role created successfully",
+  "role_updated": "Role updated successfully",
+  "role_deleted": "Role deleted successfully",
+  "role_not_found": "Role not found",
+  "roles_loaded": "Roles loaded successfully"
+}

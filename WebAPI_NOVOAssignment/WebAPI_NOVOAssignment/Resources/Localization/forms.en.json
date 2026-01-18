@@ -1,0 +1,61 @@
+{
+  "login": {
+    "title": "Login",
+    "fields": [
+      {
+        "name": "email",
+        "type": "email",
+        "label": "Email Address",
+        "placeholder": "Enter your email",
+        "required": true
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "label": "Password",
+        "placeholder": "Enter your password",
+        "required": true
+      }
+    ]
+  },
+  "register": {
+    "title": "Register",
+    "fields": [
+      {
+        "name": "username",
+        "type": "text",
+        "label": "Username",
+        "placeholder": "Choose a username",
+        "required": true
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "label": "Email Address",
+        "placeholder": "Enter your email",
+        "required": true
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "label": "Password",
+        "placeholder": "Create a strong password",
+        "required": true
+      },
+      {
+        "name": "firstName",
+        "type": "text",
+        "label": "First Name",
+        "placeholder": "Enter your first name",
+        "required": false
+      },
+      {
+        "name": "lastName",
+        "type": "text",
+        "label": "Last Name",
+        "placeholder": "Enter your last name",
+        "required": false
+      }
+    ]
+  }
+}
