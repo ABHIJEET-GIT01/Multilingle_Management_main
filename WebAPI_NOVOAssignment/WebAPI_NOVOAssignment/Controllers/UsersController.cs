@@ -13,6 +13,7 @@ namespace WebAPI_NOVOAssignment.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Produces("application/json")]
+[Authorize]
 public class UsersController : ControllerBase
 {
     private readonly IUserService _userService;

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI_NOVOAssignment.DTOs;
 using WebAPI_NOVOAssignment.Extensions;
@@ -13,6 +14,7 @@ namespace WebAPI_NOVOAssignment.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Produces("application/json")]
+[Authorize]
 public class FormsController : ControllerBase
 {
     private readonly IUserService _userService;
@@ -54,47 +56,5 @@ public class FormsController : ControllerBase
         }
 
         return Ok(form);
-    }
-
-    /// <summary>
-    /// Register a new user
-    /// </summary>
-    /// <remarks>
-    /// Query parameters:
-    /// - culture: Language code (en, hi, mr) - default: en
-    /// </remarks>
-    [HttpPost("register")]
-    [ProducesResponseType(typeof(ApiResponseDto<UserDetailDto>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ApiResponseDto<object>), StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<ApiResponseDto<UserDetailDto>>> Register([FromBody] CreateUserRequestDto request)
-    {
-        var culture = HttpContext.GetCulture();
-
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(new ApiResponseDto<object>
-            {
-                Success = false,
-                Message = _localizationService.GetMessage("validation_failed", culture),
-                Errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList()
-            });
-        }
-
-        var user = await _userService.CreateUserAsync(request);
-        if (user == null)
-        {
-            return Conflict(new ApiResponseDto<object>
-            {
-                Success = false,
-                Message = _localizationService.GetMessage("registration_failed", culture)
-            });
-        }
-
-        return Ok(new ApiResponseDto<UserDetailDto>
-        {
-            Success = true,
-            Message = _localizationService.GetMessage("registration_success", culture),
-            Data = user
-        });
     }
 }
