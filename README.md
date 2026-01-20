@@ -487,7 +487,7 @@ WebAPI_NOVOAssignment/
 ---
 
 ## Default Credentials
-
+⚠️ **IMPORTANT**: I added credentials for initial access and testing as part of the assignment. This is not a good practice for production systems.
 After database setup, use these credentials to login:
 
 | Field | Value |
